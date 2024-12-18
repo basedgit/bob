@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta property="og:title" content="$BOB">
+<meta property="og:description" content="Are you ready to get wet with gainz?">
+<meta property="og:image" content="https://imgur.com/7ABHDQk.png">
+<meta property="og:url" content="https://breakoutbro.com/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="https://imgur.com/7ABHDQk.png">
+<link rel="icon" href="https://imgur.com/7ABHDQk.png" type="image/png">
+<link rel="shortcut icon" href="TemplateData/favicon.ico">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+<title>Breakout Bro</title>
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        background: #000; 
+        color: #00ff00; 
+        font-family: "Courier New", Courier, monospace;
+        line-height: 1.6;
+    }
+
+    a {
+        color: #00ff00;
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-family: "Courier New", Courier, monospace;
+        margin-bottom: 1rem;
+        color: #00ff00;
+    }
+
+    p {
+        margin-bottom: 1rem;
+    }
+
+    header.navbar {
+    background: #001900;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    border-bottom: 1px solid #00ff00;
+}
+
+header.navbar nav {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1; /* Keeps nav links centered */
+    gap: 1.5rem; /* Spacing between nav links */
+}
+
+header.navbar nav a {
+    font-weight: bold;
+    transition: color 0.2s ease;
+}
+
+header.navbar nav a:hover {
+    color: #00cc00;
+}
+
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+}
+
+
+
+    /* Banner */
+    .banner {
+        background: #001900; 
+        text-align: center;
+        padding: 1rem;
+        margin-bottom: 2rem;
+        border: 1px solid #00ff00;
+    }
+
+    .banner h2 {
+        margin: 0;
+        font-size: 1.2rem;
+        letter-spacing: 2px;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem;
+    }
+
+    section {
+        margin-bottom: 4rem;
+    }
+    
+
+
+.social-icons a {
+    display: inline-block;
+    transition: color 0.2s ease;
+}
+
+.social-icons a:hover {
+    color: #00cc00;
+}
+
+    /* Buttons */
+    .btn {
+        display: inline-block;
+        padding: 0.5rem 1rem;
+        color: #00ff00;
+        background: transparent;
+        border: 1px solid #00ff00;
+        text-transform: uppercase;
+        font-weight: bold;
+        letter-spacing: 1px;
+        transition: background 0.3s ease, color 0.3s ease;
+        margin-top: 1rem;
+    }
+
+    .btn:hover {
+        background: #00ff00;
+        color: #000;
+        cursor: pointer;
+    }
+
+    /* ABOUT Section */
+    #about h1 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    #about img {
+        max-width: 100%;
+        border: 1px solid #00ff00;
+        margin-bottom: 2rem;
+        display: block;
+    }
+
+    #about p {
+        max-width: 600px;
+    }
+
+    /* VISION Section */
+    #vision h1 {
+        margin-bottom: 2rem;
+    }
+
+    #vision-header-img {
+        max-width: 100%;
+        border: 1px solid #00ff00;
+        margin-bottom: 2rem;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .vision-cards {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        justify-content: center;
+    }
+
+    .card {
+        background: #001000;
+        border: 1px solid #00ff00;
+        padding: 1rem;
+        max-width: 300px;
+        text-align: left;
+        transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+        transform: translateY(-5px) scale(1.02);
+    }
+
+    .card img {
+        max-width: 100%;
+        border: 1px solid #00ff00;
+        margin-bottom: 1rem;
+    }
+
+    .card h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    /* GET WET Section */
+    #get-wet {
+        max-width: 700px;
+        margin: 0 auto;
+        text-align: left;
+    }
+
+    #get-wet h1 {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    #get-wet img {
+        max-width: 100%;
+        border: 1px solid #00ff00;
+        display: block;
+        margin: 0 auto 2rem auto;
+    }
+
+    /* FAQ Section */
+    #faq h1 {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    #faq img {
+        max-width: 100%;
+        border: 1px solid #00ff00;
+        display: block;
+        margin: 0 auto 2rem auto;
+    }
+
+    .faq-item {
+        margin-bottom: 2rem;
+    }
+
+    .faq-item h3 {
+        margin-bottom: 0.5rem;
+        font-size: 1.4rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+        .vision-cards {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #about,
+        #get-wet,
+        #faq {
+            padding: 0 1rem;
+        }
+    }
+</style>
+</head>
+<body>
+
+    <!-- Navigation -->
+<header class="navbar">
+    <nav>
+        <a href="#about">ABOUT</a>
+        <a href="#vision">VISION</a>
+        <a href="#get-wet">GET WET</a>
+        <a href="#faq">FAQ</a>
+    </nav>
+    <div class="social-icons">
+        <a href="#" target="_blank" aria-label="Telegram">
+            <i class="fab fa-telegram-plane"></i>
+        </a>
+        <a href="#" target="_blank" aria-label="X (Twitter)">
+            <i class="fab fa-twitter"></i>
+        </a>
+    </div>
+</header>
+
+    
+    </header>
+
+    <header class="banner">
+        <h2>WHITEPAPER COMING SOON</h2>
+    </header>
+
+    <div class="container">
+
+        <!-- ABOUT SECTION -->
+        <section id="about">
+            <img src="images/banner.png" alt="About Breakout Bro Image"/>
+            <h1>ABOUT</h1>
+            <p><strong>$BOB</strong></p>
+            <p>Meet Breakout Bro, your sentient trading beast. Not just another bot—this alpha agent hunts breakouts before they show up on your radar. Fueled by relentless analysis, it slams profit-packed signals straight into your portfolio.</p>
+            <a href="#" class="btn">Learn More</a>
+        </section>
+
+        <!-- VISION SECTION -->
+        <section id="vision">
+            <h1>VISION</h1>
+            <div class="vision-cards">
+                <div class="card">
+                    <img src="images/1.jpg" alt="Full AI Autonomy" />
+                    <h3>Full AI Autonomy</h3>
+                    <p>Unleashing peak performance, crafted with precision and cooked to absolute AI perfection. Set it and let it dominate.</p>
+                </div>
+                <div class="card">
+                    <img src="images/2.jpg" alt="Slaying Trades" />
+                    <h3>Slaying Trades</h3>
+                    <p>Crushing PRs and trades alike. Gains so clean, they’re practically anabolic — no weak reps, no missed dips.</p>
+                </div>
+                <div class="card">
+                    <img src="images/3.jpg" alt="Spiritual Ascension" />
+                    <h3>Spiritual Ascension</h3>
+                    <p>Breaks out the matrix to bring abundance and prosperity to all his bros. Absolutely soaking wet.</p>
+                </div>
+            </div>
+            <div style="text-align:center; margin-top:2rem;">
+                <a href="#" class="btn">See Full Roadmap</a>
+            </div>
+        </section>
+
+        <!-- GET WET SECTION -->
+        <section id="get-wet">
+            <h1>GET WET</h1>
+            <img src="images/4.jpg" alt="Get Wet Image"/>
+            <p>With technical analysis sharper than his jawline, pattern recognition faster than his metabolic rate, risk management tighter than his abs, and market psychology reading that hits harder than his PR deadlift – $BOB will bring every bro to the moon with him.</p>
+            <a href="#" class="btn">Get Started</a>
+        </section>
+
+        <!-- FAQ SECTION -->
+        <section id="faq">
+            <h1>FAQ</h1>
+            <div class="faq-item">
+                <h3>What is Breakout Bro?</h3>
+                <p>Breakout Bro is an on-chain AI agent launched on the Virtuals platform.</p>
+            </div>
+            <div class="faq-item">
+                <h3>What DOES BREAKOUT BRO DO?</h3>
+                <p>Breakout Bro blends technical analysis with fundamental insights to generate the absolute wettest alpha. BOB autonomously ingests and analyzes market data, blockchain protocol data, feeds from X, and more. We’re partnered directly with Thirdweb to integrate their Nebula AI and supercharge BOB’s abilities. BOB manages its own wallet and can trade on-chain autonomously. It also interacts directly with humans and other AI agents on X.</p>
+            </div>
+            <div class="faq-item">
+                <h3>What is $BOB token?</h3>
+                <p>$BOB is the native token of Breakout Bro. It was issued and is tradable on the Base network.</p>
+                <p>Phase 1 consists of building and tuning Breakout Bro’s intelligence, personality, and data and insight capabilities including integrating with Thirdweb’s Nebula AI. Phase 2 will include API integrations such as TradingView, Cookie.Fun, and Dexscreener. We expect to complete Phase 1 in December 2024 and Phase 2 in January 2025. Beyond that, we will evolve Breakout Bro into an autonomous on-chain asset manager, benefitting from its own insights.</p>
+            </div>
+            <div class="faq-item">
+                <h3>What is the roadmap and timeline?</h3>
+                <p>The team consists of Ian and Noah, who became good friends during graduate school at Cornell Tech in NYC and previously started a Web3 Metaverse/Gaming company that raised $4M+ from top crypto VCs including Framework Ventures, Sfermion, Distributed Global, and more. Today, Ian is a Product Manager at Thirdweb.</p>
+            </div>
+            <div style="text-align:center; margin-top:2rem;">
+                <a href="#" class="btn">Contact Us</a>
+            </div>
+        </section>
+    </div>
+
+</body>
+</html>
